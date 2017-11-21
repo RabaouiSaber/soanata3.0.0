@@ -1,0 +1,33 @@
+{% extends 'SonataAdminBundle:Core:user_block.html.twig' %}
+
+{% block user_block %}
+     {{ parent() }}
+   
+
+                                                    
+                                                                    
+        
+<li class="user-header bg-light-blue">
+                    <img src="/projetsonata/web/bundles/sonatauser/default_avatar.png" class="img-circle" alt="Avatar">
+                <p>{{app.user.username}}</p>
+</li>
+
+
+<li class="user-footer">
+    <div class="pull-left">
+        <a href="{{ path('admin_sonata_user_user_edit',{'id': app.user.id}) }}" class="btn btn-default btn-flat"><i class="fa fa-user"></i> Profil</a>
+    </div>
+
+    <div class="pull-right">
+        <a href="{{ path('sonata_user_security_logout') }}" class="btn btn-default btn-flat"><i class="fa fa-sign-out fa-fw"></i> Déconnexion</a>
+    </div>
+</li>
+    
+    
+
+    <div class="admin-user-locale">
+        {{ locale_switcher(null, null, 'AppBundle:Admin:switcher_links.html.twig') }}
+    </div>
+{% endblock %}
+
+

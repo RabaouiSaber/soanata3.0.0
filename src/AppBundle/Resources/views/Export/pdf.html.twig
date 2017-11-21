@@ -1,0 +1,9 @@
+<table border="1">
+    {% for elements in source %}
+        <tr>
+        {% for element in elements %}
+            <td>{{ element }}</td>
+        {% endfor %}
+        </tr>
+    {% endfor %}
+</table>

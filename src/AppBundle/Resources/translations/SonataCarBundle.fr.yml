@@ -1,0 +1,9 @@
+## YAML Template.
+---
+
+
+label.libelle: Libellé
+label.datefabriquation: date de fabriquation
+label.nombredeporte: Nombre de porte
+label.picture: Image
+app.admin.menu.car: Voitures

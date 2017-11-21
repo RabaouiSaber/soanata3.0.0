@@ -1,0 +1,55 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+
+    
+admin_dashboard:
+    pattern: /{_locale}/admin/
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: sonata_admin_dashboard
+        permanent: true # este para 301
+        
+        
+admin_area:
+    resource: "@SonataAdminBundle/Resources/config/routing/sonata_admin.xml"
+    prefix: /{_locale}/admin
+
+sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /{_locale}/admin
+    
+admin_without_locale:
+    pattern: /admin
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: sonata_admin_dashboard
+        permanent: true # este para 301
+
+admin_dashboard_without_locale:
+    pattern: /admin/dashboard
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: sonata_admin_dashboard
+        permanent: true # este para 301    
+ 
+    
+#sonata_user_admin_security1:
+#    resource: '@SonataUserBundle/Resources/config/routing/admin_security.xml'
+#    prefix: /rs/admin
+#
+#sonata_user_admin_resetting1:
+#    resource: '@SonataUserBundle/Resources/config/routing/admin_resetting.xml'
+#    prefix: /rs/admin/resetting
+    
+    
+    
+gallery:
+    resource: '@SonataMediaBundle/Resources/config/routing/gallery.xml'
+    prefix: /media/gallery
+
+media:
+    resource: '@SonataMediaBundle/Resources/config/routing/media.xml'
+    prefix: /media

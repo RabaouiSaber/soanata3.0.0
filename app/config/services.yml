@@ -1,0 +1,73 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+    #service_name:
+    #    class: AppBundle\Directory\ClassName
+    #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
+    
+        
+    admin.blog_post:
+        class: AppBundle\Admin\BlogPostAdmin
+        arguments: [~, AppBundle\Entity\BlogPost, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Groupe 1",label: Post ,label_catalogue: "AppBundle" }
+        public: true
+#
+    admin.post:
+        class: AppBundle\Admin\PostAdmin
+        arguments: [~, AppBundle\Entity\Post, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Post, group: "Groupe 2" }
+        public: true
+        
+    admin.category:
+        class: AppBundle\Admin\CategoryAdmin
+        arguments: [~, AppBundle\Entity\Category, ~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Category, group: "Groupe 2" }
+        public: true
+#        
+    sonata.admin.exporter:
+        class: AppBundle\Export\Exporter
+        calls:
+            - [ setKnpSnappyPdf, [@knp_snappy.pdf]]
+            - [ setTemplateEngine, [@templating]]
+#            
+    app.admin.car:
+        class: AppBundle\Admin\CarAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: Demo, label: app.admin.menu.car }
+        arguments:
+            - null
+            - AppBundle\Entity\Car
+            - AppBundle:CRUD
+        public: true
+        calls:
+            - [setTranslationDomain, [SonataCarBundle]]
+#        
+    bundle.admin.product_statistics:
+        class: AppBundle\Admin\ProductStatisticsAdmin
+        arguments: [~, AppBundle\Entity\ProductStatistic, AppBundle:ProductStatisticsAdmin]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Product Statistics,  on_top: true, icon: '<i class="fa fa-bar-chart"></i>' }
+#    
+#            
+    app.menu_listener:
+        class: AppBundle\EventListener\MenuBuilderListener
+        tags:
+            - { name: kernel.event_listener, event: sonata.admin.event.configure.menu.sidebar, method: addMenuItems }
+#            
+#    # Add Block         
+    sonata.block.service.rss:
+        class: Sonata\BlockBundle\Block\Service\RssBlockService
+        arguments:
+            - sonata.block.service.rss
+            - "@templating"
+        tags:
+            - { name: sonata.block }
+            
+            
+            

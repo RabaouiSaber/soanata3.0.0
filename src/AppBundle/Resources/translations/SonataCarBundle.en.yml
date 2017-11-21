@@ -1,0 +1,9 @@
+## YAML Template.
+---
+
+
+label.libelle: Wording
+label.datefabriquation: Date of manufacture
+label.nombredeporte: Number of doors
+label.picture: Picture
+app.admin.menu.car: Cars

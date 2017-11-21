@@ -1,0 +1,40 @@
+{% extends base_template %}
+{#{% extends 'SonataAdminBundle::standard_layout.html.twig' %}#}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    {# put links to javascript libraries here if you need any #}
+    
+     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script type="text/javascript">
+        {{ chart(chart) }}
+        {{ chart(chart1) }}
+        {{ chart(chart2) }}
+    </script>
+   
+{% endblock %}
+
+{% block content %}
+    {# put some html code to display statistics data or use some javascript library to generate cool graphs #}
+   <div id="linechart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>
+   </br>
+    <div id="piechart" style="min-width: 400px; height: 400px; margin: 0 auto"></div>-
+    </br>
+     <div id="container1" style="min-width: 400px; height: 400px; margin: 0 auto"></div> 
+     
+     
+     {{ sonata_block_render({ 'type': 'sonata.block.service.rss' }, {
+            "title": "Sonata Project\'s Feeds",
+            "url": "https://sonata-project.org/blog/archive.rss"
+        }) 
+        }}
+     
+{% endblock %}
+
+
+
+
+
