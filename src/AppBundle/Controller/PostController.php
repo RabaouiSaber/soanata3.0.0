@@ -81,11 +81,21 @@ class PostController extends Controller {
       array('id' => 5, 'title' => 'Mission de webmaster'),
       array('id' => 9, 'title' => 'Offre de stage webdesigner')
     );
+    
+    $page = 1;
+    $nbPerPage = 3;
+
+            // On récupère notre objet Paginator
+            $listPost = $this->getDoctrine()
+              ->getManager()
+              ->getRepository('AppBundle:Post')
+              ->getPost($page, $nbPerPage)
+            ;
 
     return $this->render('AppBundle:Post:menu.html.twig', array(
       // Tout l'intérêt est ici : le contrôleur passe
       // les variables nécessaires au template !
-      'listAdverts' => $listAdverts
+      'listAdverts' => $listPost
     ));
   }
   

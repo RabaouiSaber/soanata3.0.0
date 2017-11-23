@@ -154,6 +154,7 @@ class CarController extends Controller {
         ;
              * 
              */
+            
 
         return $this->render('AppBundle:Car:view.html.twig', array(
           'advert'           => $car,

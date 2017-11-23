@@ -11,6 +11,8 @@
 
   <h2>{{ advert.libelle }}</h2>
   <i>Par {{ advert.nombredeporte }}, le {{ advert.datefabriquation|date('d/m/Y') }}</i>
-
-
+  
+  <div>
+  {% media advert.picture, 'big' with {'class': 'myclass'} %}
+  </div>
 {% endblock %}

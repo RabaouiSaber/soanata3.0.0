@@ -17,19 +17,23 @@
 <body>
   <div class="container">
     <div id="header" class="jumbotron">
-      <h1>Ma plateforme</h1>
+      <h1>{{ 'My plateforme'|trans }}</h1>
       <p>
-        Hello everybody
+         {{ 'Hello everybody'|trans }}
       </p>
+    </div>
+      
+    <div class="admin-user-locale" style="float: right;">
+        {{ locale_switcher(null, null, 'AppBundle:Admin:switcher_links.html.twig') }}
     </div>
 
     <div class="row">
       <div id="menu" class="col-md-3">
         <h3>Menu</h3>
         <ul class="nav nav-pills nav-stacked">
-          <li><a href="{{ path('oc_platform_home') }}">Accueil</a></li>
+          <li><a href="{{ path('oc_platform_home') }}">{{ 'home'|trans }}</a></li>
         </ul>
-        <h4>Dernières Articles</h4>
+        <h4>{{ 'last post'|trans }}</h4>
         {{ render(controller("AppBundle:Post:menu", {'limit': 3})) }}
        </div>
       <div id="content" class="col-md-9">
