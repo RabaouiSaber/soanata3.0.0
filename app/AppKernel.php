@@ -16,7 +16,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new AppBundle\AppBundle(),
+            
             
             // Debut Add sonata Admin
             // These are the other bundles the SonataAdminBundle relies on
@@ -29,6 +29,7 @@ class AppKernel extends Kernel
             new Sonata\AdminBundle\SonataAdminBundle(),
             // Fin Add sonata Admin
             
+            new AppBundle\AppBundle(),
             
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
             

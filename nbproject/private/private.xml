@@ -3,17 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/app/config/parameters.yml.dist</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/app/Resources/views/layout.html.twig</file>
             <file>file:/C:/xampp/htdocs/ProjetSonata/app/config/config.yml</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Admin/CarAdmin.php</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Entity/Category.php</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Controller/ProductStatisticsAdminController.php</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Admin/ProductStatisticsAdmin.php</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/app/config/services.yml</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Resources/views/ProductStatistics/product_statistics.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Admin/BlogPostAdmin.php</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/app/config/parameters.yml</file>
-            <file>file:/C:/xampp/htdocs/ProjetSonata/composer.json</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Resources/views/layout.html.twig</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Repository/PostRepository.php</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Controller/CarController.php</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Resources/config/routing.yml</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Resources/views/Post/view.html.twig</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Resources/views/Post/menu.html.twig</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Entity/Post.php</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Entity/BlogPost/TranslationPost.php</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Controller/PostController.php</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Resources/views/Car/index.html.twig</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/app/config/routing.yml</file>
+            <file>file:/C:/xampp/htdocs/ProjetSonata/src/AppBundle/Repository/CarRepository.php</file>
         </group>
     </open-files>
 </project-private>

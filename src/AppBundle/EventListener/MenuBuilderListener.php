@@ -17,6 +17,11 @@ class MenuBuilderListener
         ])->setExtras([
             'icon' => '<i class="fa fa-bar-chart"></i>',
         ]);
+        
+        $menu['Groupe 2']->addChild('Postt', [
+            'label' => 'BlogPost',
+            'route' => 'admin_app_blogpost_list',
+        ]);
 
     }
 }

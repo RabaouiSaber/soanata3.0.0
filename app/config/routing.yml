@@ -2,7 +2,9 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
-
+oc_platform:
+    resource: "@AppBundle/Resources/config/routing.yml"
+    prefix:  /platform
     
 admin_dashboard:
     pattern: /{_locale}/admin/

@@ -1,0 +1,16 @@
+{# src/OC/PlatformBundle/Resources/view/Advert/view.html.twig #}
+
+{% extends "AppBundle::layout.html.twig" %}
+
+{% block title %}
+  Lecture d'une annonce - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+
+  <h2>{{ advert.libelle }}</h2>
+  <i>Par {{ advert.nombredeporte }}, le {{ advert.datefabriquation|date('d/m/Y') }}</i>
+
+
+{% endblock %}

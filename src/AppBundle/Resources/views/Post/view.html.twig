@@ -1,0 +1,16 @@
+{# src/OC/PlatformBundle/Resources/view/Advert/view.html.twig #}
+
+{% extends "AppBundle::layout.html.twig" %}
+
+{% block title %}
+  Lecture d'un Article - {{ parent() }}
+{% endblock %}
+
+{% block ocplatform_body %}
+
+
+    <h2>{{ advert.title }}</h2>
+  <p>{{ advert.body }}</p>
+
+
+{% endblock %}

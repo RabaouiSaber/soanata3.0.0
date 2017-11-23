@@ -95,6 +95,9 @@ sonata_admin:
             #- '/projetsonata/web/bundles/sonatacore/vendor/moment/min/moment-with-locales.min.js'
             #- '/projetsonata/web/bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'
             #- '/projetsonata/web/bundles/sonatacore/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'
+    security:
+        handler: sonata.admin.security.handler.role
+        
     dashboard:
         blocks:
 
@@ -147,6 +150,16 @@ knp_snappy:
 sonata_user:
     security_acl: false
     manager_type: orm # can be orm or mongodb
+    admin:                  # Admin Classes
+        user:
+            class:          Sonata\UserBundle\Admin\Entity\UserAdmin
+            controller:     SonataAdminBundle:CRUD
+            translation:    SonataUserBundle
+
+        group:
+            class:          Sonata\UserBundle\Admin\Entity\GroupAdmin
+            controller:     SonataAdminBundle:CRUD
+            translation:    SonataUserBundle
     
 fos_user:
     db_driver:      orm # can be orm or odm

@@ -37,6 +37,14 @@ class UserAdmin extends SonataUserAdmin
                     ])
                ->end()
                 ->end();
+        
+        if (!$this->isGranted('ROLE_SUPER_ADMIN')) {
+            // Only ROLE_SUPER_ADMIN can edit the fields in Status, Groups and Roles groups
+            $formMapper->removeGroup('Status', 'Security', true);
+            $formMapper->removeGroup('Groups', 'Security', true);
+            $formMapper->removeGroup('Roles', 'Security', true);
+        }
+
  
     }
      
