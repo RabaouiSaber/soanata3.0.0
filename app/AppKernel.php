@@ -61,6 +61,14 @@ class AppKernel extends Kernel
             // change locale manually from dashboard  sonata
             new Lunetics\LocaleBundle\LuneticsLocaleBundle(),
             
+            // TimeLine
+            new Sonata\TimelineBundle\SonataTimelineBundle(),
+            new Spy\TimelineBundle\SpyTimelineBundle(),
+            new Application\Sonata\TimelineBundle\ApplicationSonataTimelineBundle(),
+            
+            
+             new Sonata\IntlBundle\SonataIntlBundle(),
+            
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
